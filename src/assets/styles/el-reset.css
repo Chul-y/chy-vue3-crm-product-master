@@ -29,3 +29,13 @@
 .el-breadcrumb {
     margin: 10px 0 !important;
 }
+
+/* 让el-tree父级不显示复选框的样式 */
+
+.el-tree .el-tree-node .is-leaf+.el-checkbox .el-checkbox__inner {
+    display: inline-block;
+}
+
+.el-tree .el-tree-node .el-checkbox .el-checkbox__inner {
+    display: none
+}

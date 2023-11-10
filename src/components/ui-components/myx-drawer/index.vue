@@ -74,7 +74,7 @@ let handleClose = () => {
 //抽屉打开的时候
 
 let handleOpen = () => {
-    console.log('123')
+    // console.log('123')
     // console.log(props.openedFn)
     typeof (props['openedFn']) === 'function' && props['openedFn']()
 }

@@ -187,8 +187,8 @@ let captcha = ref(null);
         border-radius: 5%;
         padding: 20px;
         position: fixed;
-        right: 12%;
-        bottom: 20%;
+        right: 42%;
+        bottom: 37%;
         z-index: 999;
 
         .title {
@@ -211,6 +211,7 @@ let captcha = ref(null);
                 text-align: center;
                 line-height: 20px;
                 user-select: none;
+                
             }
         }
 
@@ -241,8 +242,8 @@ let captcha = ref(null);
         justify-content: center;
         background-color: rgba(0, 0, 0, .4);
         position: fixed;
-        right: 10%;
-        bottom: 12%;
+        right: 40%;
+        bottom: 30%;
         z-index: 99;
         box-sizing: border-box;
 
