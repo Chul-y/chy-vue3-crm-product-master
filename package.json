@@ -1,0 +1,37 @@
+{
+  "name": "vite-vue3-crm",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vueuse/core": "^10.5.0",
+    "axios": "^1.6.0",
+    "element-plus": "^2.4.1",
+    "intro.js": "^7.2.0",
+    "myx-slider-captcha": "^1.0.7",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.0",
+    "qf-export-excel": "^1.5.1",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "unplugin-auto-import": "^0.16.7",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "4.2.3",
+    "@vue/test-utils": "^2.4.1",
+    "jsdom": "^22.1.0",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "4.4.5",
+    "vitest": "^0.34.6"
+  }
+}
