@@ -44,7 +44,7 @@ import sliderCaptcha from "myx-slider-captcha"
 import { loginApi } from '@/api/users';
 //引入用户store
 import useUsersStore from "@/store/users"
-import { onMounted } from "vue";
+import {getCurrentRolePermissionApi} from "../../api/role"
 //登入流程:
 //1.获取用户输入的用户名和密码
 //2.请求服务器,将用户密码携带给接口
@@ -153,6 +153,9 @@ const submitForm = (formEl) => {
                             sessionStorage.setItem('myx-token', res.token);
                             //存储用户信息
                             usersStore.userInfo = res.userInfo;
+                            // 发起请求获取当前角色权限数据
+                            let currentRolePermission=await getCurrentRolePermissionApi({roleid:res.userInfo.roleid,type:1})
+                            usersStore.currentRolePermission = currentRolePermission.data
                             //跳转到主页
                             router.push("/")
                             //关闭动画
