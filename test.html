@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECharts 环形图</title>
+    <!-- 引入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js"></script>
+  </head>
+  <body>
+    <div id="echarts-container" style="width: 600px; height: 400px"></div>
+
+    <script>
+      // 初始化 ECharts 实例
+      var myChart = echarts.init(document.getElementById("echarts-container"));
+
+      // 指定图表的配置项和数据
+      var option = {
+        title: {
+          text: "技术分布",
+          subtext: "数据来源：你的数据来源",
+        },
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br/>{b}: {c} ({d}%)",
+        },
+        legend: {
+          orient: "vertical",
+          left: 10,
+          data: ["angular", "umi", "three.js"],
+        },
+        series: [
+          {
+            name: "技术占比",
+            type: "pie",
+            radius: ["40%", "60%"],
+            avoidLabelOverlap: false,
+            label: {
+              show: true,
+              position: "outside", // 修改为'outside'，标签显示在外侧
+              formatter: "{b}: {d}%", // 显示标签和百分比
+            },
+            labelLine: {
+              show: true,
+              length: 20,
+              length2: 40,
+              smooth: true,
+            },
+            emphasis: {
+              label: {
+                show: true,
+                fontSize: "20",
+                fontWeight: "bold",
+              },
+            },
+            data: [
+              {
+                value: 13.64,
+                name: "angular",
+                itemStyle: { color: "#d75a3a" },
+              },
+              { value: 45.45, name: "umi", itemStyle: { color: "#13020c" } },
+              {
+                value: 40.91,
+                name: "three.js",
+                itemStyle: { color: "#55a49f" },
+              },
+            ],
+          },
+        ],
+      };
+
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>
